@@ -226,11 +226,12 @@ function finish {
 }
 
 function get_random_port {
-  local -i num=0  # Init to an invalid value, to prevent "unbound variable" errors.
-  until (( 1024 <= num && num < 65536)); do
-    num=$(( RANDOM + (RANDOM % 2) * 32768 ));
-  done;
-  echo "${num}";
+  # local -i num=0  # Init to an invalid value, to prevent "unbound variable" errors.
+  # until (( 1024 <= num && num < 65536)); do
+  #   num=$(( RANDOM + (RANDOM % 2) * 32768 ));
+  # done;
+  # echo "${num}";
+  echo "63162";
 }
 
 function create_persisted_state_dir() {
